@@ -11,11 +11,9 @@
   with corresponding birthday together. 
 
   Storing these pieces of information in different arrays and then pairing them up
-  makes the iteration unnecessarily complicated, code will be less intuitive, needs extra cognitive effort to
-  reason about and last but not least it can be error-prone (for example, you match up the wrong birthday to a name).
+  makes the iteration unnecessarily complicated, code will be less intuitive, needs extra cognitive effort to reason about and last but not least it can be error-prone (for example, you match up the wrong birthday to a name).
 
-  In this exercise you will practice how to access Objects stored in an Array and their properties. You already know 
-  different ways of looping through Arrays, it won't be different in this case. The only extra step is that you have to 
+  In this exercise you will practice how to access Objects stored in an Array and their properties. You already know different ways of looping through Arrays, it won't be different in this case. The only extra step is that you have to 
   use values inside Objects.
 */
 
@@ -58,29 +56,40 @@ let writers = [
   }
 ];
 
-/*
-Exercise 1:
 
-  Loop through the Array, and for each object, use `console.log()` to print out the below sentence
-  and insert the corresponding values to the place holders that are indicated in curly braces:
+//Exercise 1:
+
+ // Loop through the Array, and for each object, use `console.log()` to print out the below sentence
+ // and insert the corresponding values to the place holders that are indicated in curly braces:
 
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
-*/
+
 function logAllWriters() {
   // write your code to log all writers here
 };
 
+writers.forEach((writer) => {
+console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`);
+});
+
 /*
 Exercise 2:
 
-  Only `console.log()` out the writers who are in their 40s (meaning between 40 and 49)
-  and not alive anymore. Use the below sentence format:
+  Only `console.log()` out the writers who are in their 40s (meaning between >=40 && <=49)
+  and !not alive anymore. Use the below sentence format:
 
-  "Writer {firstName} {lastName} died at {age} years old."
+  "Writer ${firstName} ${lastName} died at ${age} years old."
 */
 
 function logDeadWritersInTheirForties() {
-  // write your code here
+  // write your code here (! operand means not) (=> arrow function - expression)
+  
+writers.forEach((writer) => {
+  if (writer.age >= 40 && writer.age <= 49 && !writer.alive) {
+  console.log (`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`);
+}
+  
+});
 }
 
 /*
@@ -93,6 +102,12 @@ Exercise 3:
 
 function logAliveWritersInTheirForties() {
   // write your code here
+  writers.forEach((writer) => {
+  if (writer.age >= 40 && writer.age <= 49 && writer.alive) {
+  console.log (`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`);
+}
+  
+});
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== 
