@@ -24,14 +24,53 @@ without using any variables or any logic like loops, template strings or if stat
 
 */
 
-const books = [];
-  
-// exercise 1
-function logBooks() {
-}
-  
+const books = [
+  {
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
+    alreadyRead: "true",
+  },
 
-/*
+  {
+    title: "Where the Cawdads Sings",
+    author: "Delia Owens",
+    alreadyRead: "true",
+
+  },
+
+  {
+    title: "59 Memory Lane: Pengelly Series",
+    author: "Celia Anderson",
+    alreadyRead: "false",
+
+  },
+
+  {
+    title: "The Cows",
+    author: "Dawn O’Porter",
+    alreadyRead: "false",
+
+  },
+
+  {
+    title: "The Shadow of the Wind",
+    author: "Carlos Ruiz Zafón",
+    alreadyRead: "true",
+
+  },
+];
+
+// exercise 1
+function logBooks(book) {
+  if (book.read){
+    console.log(`"You have read this book... "${book.title} "by " ${book.author}`);
+  } else {
+    console.log(`"You need to read this book! "${book.title} "by " ${book.author}`);
+  }
+}
+  console.log(books);
+
+// Comment from Colette - struggled to return the strings. Not sure if this is correct as I can't seem to run the `npm test -- --testPathPattern 3-journey-planner.js.
 
 =====
 Exercise 2
