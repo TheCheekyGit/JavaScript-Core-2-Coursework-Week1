@@ -21,7 +21,9 @@ You have to implement the missing features according to the specification.
 
 // Here is your starting point:
 let bottle = {
-  volume: 0,
+  volumeEmpty: [0],
+  volumeFull: [100],
+
   fillUp: function () {
     // calling this function should completely fill your bottle (volume = 100);
   },

@@ -20,8 +20,12 @@
  */
 
 function eligibleStudents(attendances) {
+  return attendances
+    .filter((student) => student.attendance >= 8)
+    .map((student) => (student.name));
    
 }
+//Comment from Colette - Not sure if this is correct as I can't seem to run the `npm test -- --testPathPattern 3-journey-planner.js. Alastair aware of the issue.
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 - To run the tests for this exercise, run `npm test -- --testPathPattern 2-eligible-students.js`
