@@ -57,58 +57,50 @@ let writers = [
 ];
 
 
-//Exercise 1:
+Exercise 1:
 
- // Loop through the Array, and for each object, use `console.log()` to print out the below sentence
- // and insert the corresponding values to the place holders that are indicated in curly braces:
+ Loop through the Array, and for each object, use `console.log()` to print out the below sentence
+ and insert the corresponding values to the place holders that are indicated in curly braces:
 
-  "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 
 function logAllWriters() {
-  // write your code to log all writers here
-};
+  writers.forEach((writer) => {
+    console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`
 
-writers.forEach((writer) => {
-console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`);
+);
 });
 
-/*
+  
 Exercise 2:
 
   Only `console.log()` out the writers who are in their 40s (meaning between >=40 && <=49)
   and !not alive anymore. Use the below sentence format:
 
   "Writer ${firstName} ${lastName} died at ${age} years old."
-*/
 
-function logDeadWritersInTheirForties() {
-  // write your code here (! operand means not) (=> arrow function - expression)
-  
+
+function logDeadWritersInTheirForties() { 
 writers.forEach((writer) => {
   if (writer.age >= 40 && writer.age <= 49 && !writer.alive) {
-  console.log (`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`);
-}
-  
+  console.log (`Writer ${writer.firstName} ${writer.lastName} died at ${writer.age} years old.`
+  );
+  }
 });
-}
 
-/*
 Exercise 3:
 
   Only `console.log()` out alive writers who are in their 40s (meaning between 40 and 49):
 
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
-*/
+
 
 function logAliveWritersInTheirForties() {
-  // write your code here
   writers.forEach((writer) => {
   if (writer.alive === true && writer.age >= 40 && writer.age <= 49 && writer.alive) {
   console.log (`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`);
-}
-  
+  }
 });
-}
+
 //Comment from Colette - Not sure if this is correct as I can't seem to run the `npm test -- --testPathPattern 3-journey-planner.js. Alastair aware of the issue.
 
 /* ======= TESTS - DO NOT MODIFY ===== 

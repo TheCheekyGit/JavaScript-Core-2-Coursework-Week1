@@ -24,5 +24,22 @@ You should write and log at least 5 recipes
 
 **/
 
-let recipes = {};
+let recipes = [
+    {
+        title: "Pasta Meatballs",
+        servings: 4,
+        ingredients: ["olive oil", "pasatta sauce", "oregano", "garlic", "tomato puree"],
+    },
 
+    {
+        title: "Smoked Salmon Terrine",
+        servings: 6,
+        ingredients: ["smoked salmon", "creme cheese", "dill", "garlic", "salt & pepper"],
+    },
+
+    {
+        title: "Smoked Salmon Terrine",
+        servings: 6,
+        ingredients: ["smoked salmon", "creme cheese", "dill", "garlic ", "salt & pepper"],
+    },
+];

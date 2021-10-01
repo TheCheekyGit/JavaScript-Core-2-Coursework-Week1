@@ -68,7 +68,7 @@ function logBooks(book) {
     console.log(`"You need to read this book! "${book.title} "by " ${book.author}`);
   }
 }
-  console.log(books);
+  let books = book.filter(logbooks);
 
 // Comment from Colette - struggled to return the strings. Not sure if this is correct as I can't seem to run the `npm test -- --testPathPattern 3-journey-planner.js.
 

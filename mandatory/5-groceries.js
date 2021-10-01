@@ -19,7 +19,7 @@ let weeklyMealPlan = {
   thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
   friday: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
   saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: [],
+  sunday: ["Roast Beef", "Potatoes", "Yorkshire Pudding", "Gravy", "Mixed Veg"],
 };
 
 /*
