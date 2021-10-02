@@ -30,6 +30,15 @@ Exercise 1:
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
 
+for (let key in weeklyMealPlan){
+  weeklyMealPlan[key].forEach((element) => {
+  if (!weeklyGroceriesToBuy.includes(element)) {
+  weeklyGroceriesToBuy.push(element)
+}
+})
+};
+  
+
 /*
 Exercise 2:
   Loop through your list again, but now only collect the weekend items into the weekendGroceriesToBuy array.
