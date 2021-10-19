@@ -18,28 +18,31 @@ We made a start on this here by giving you the skeleton of our object.
 
 You have to implement the missing features according to the specification.
 */
-
+volumeFull: [100],
 // Here is your starting point:
-let bottle = {
-  volumeEmpty: [0],
-  volumeFull: [100],
 
+let bottle = {
+  volume: [],
   fillUp: function () {
-    // calling this function should completely fill your bottle (volume = 100);
-  },
+    bottle.volume = 100;
+  },// calling this function should completely fill your bottle (volume = 100);
+
   pour: function () {
-    // calling this function should increase your bottle volume by 10 units;
-  },
+    bottle.volume += 10; 
+  },// calling this function should increase your bottle volume by 10 units;
+  
   drink: function () {
-    // calling this function should decrease your bottle volume by 10 units;
-  },
+    bottle.volume -= 10; 
+  },// calling this function should decrease your bottle volume by 10 units;
+ 
   isFull: function () {
-    // this function should return true if your bottle is full;
-  },
+    bottle.volume === 100;
+  },// this function should return true if your bottle is full;
+  
   isEmpty: function () {
-    // this function should return true if your bottle is empty;
+    bottle.volume === 0;
   },
-};
+};// this function should return true if your bottle is empty;
 
 /*
 TIP:

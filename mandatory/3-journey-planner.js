@@ -26,20 +26,17 @@
   What's better about each approach?
 */
 
-function locations(journeyPlanner) {
-  return (journeyPlanner.londonLocations.Angel === "London Bridge");
+function journeyPlanner(locations, transportMode) {
+  let londonList = [];
+  for (key in locations) {
+    if (locations[key].includes(transportMode)) {
+      londonList.push(key);
+    }
+  }
+  return nameList;
 }
-
-function transport(journeyPlanner) {
-  return (journeyPlanner.londonLocations.Angel === "tube");
-}
-console.log("Location");
-let londonLocations = locations.filter(locations).filter(transport);
-console.log(londonLocations);
 
 // Comment from Colette - struggled to understand how to approach the function with two parameters. Not sure if this is correct as I can't seem to run the `npm test -- --testPathPattern 3-journey-planner.js.
-  
-
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 - To run the tests for this exercise, run `npm test -- --testPathPattern 3-journey-planner.js`
@@ -47,15 +44,15 @@ console.log(londonLocations);
 - (Reminder: You must have run `npm install` one time before this will work!)
 */
 const londonLocations = {
-    "Angel": ["tube", "bus"],
-    "London Bridge": ["tube", "river boat"],
-    "Tower Bridge": ["tube", "bus"],
-    "Greenwich": ["bus", "river boat"],
-    Angel: ["tube", "bus"],
-      "London Bridge": ["tube", "river boat"],
-      "Tower Bridge": ["tube", "bus"],
-      "Greenwich": ["bus", "river boat"],
-    };
+  Angel: ["tube", "bus"],
+  "London Bridge": ["tube", "river boat"],
+  "Tower Bridge": ["tube", "bus"],
+  Greenwich: ["bus", "river boat"],
+  Angel: ["tube", "bus"],
+  "London Bridge": ["tube", "river boat"],
+  "Tower Bridge": ["tube", "bus"],
+  Greenwich: ["bus", "river boat"],
+};
 
 test("journeyPlanner function works - case 1", () => {
   expect(journeyPlanner(londonLocations, "river boat")).toEqual([
@@ -77,5 +74,5 @@ test("journeyPlanner function works - case 3", () => {
     "Angel",
     "London Bridge",
     "Tower Bridge",
-  ])
+  ]);
 });
