@@ -56,11 +56,11 @@ let writers = [
   }
 ];
 
-
+/*
 Exercise 1:
 
  Loop through the Array, and for each object, use `console.log()` to print out the below sentence
- and insert the corresponding values to the place holders that are indicated in curly braces:
+ and insert the corresponding values to the place holders that are indicated in curly braces:*/
 
 
 function logAllWriters() {
@@ -70,11 +70,11 @@ function logAllWriters() {
 );
 });
 
-  
+ /* 
 Exercise 2:
 
   Only `console.log()` out the writers who are in their 40s (meaning between >=40 && <=49)
-  and !not alive anymore. Use the below sentence format:
+  and !not alive anymore. Use the below sentence format:*/
 
   "Writer ${firstName} ${lastName} died at ${age} years old."
 
@@ -87,9 +87,9 @@ writers.forEach((writer) => {
   }
 });
 
-Exercise 3:
+/*Exercise 3:
 
-  Only `console.log()` out alive writers who are in their 40s (meaning between 40 and 49):
+  Only `console.log()` out alive writers who are in their 40s (meaning between 40 and 49):*/
 
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 
@@ -97,7 +97,7 @@ Exercise 3:
 function logAliveWritersInTheirForties() {
   writers.forEach((writer) => {
   if (writer.alive === true && writer.age >= 40 && writer.age <= 49 && writer.alive) {
-  console.log (`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`);
+  console.log `Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`;
   }
 });
 

@@ -22,8 +22,9 @@
 function eligibleStudents(attendances) {
   return attendances
     .filter((student) => student.attendance >= 8)
-    .map((student) => (student.name));
-   
+    .map((student) => {
+      return student.name;
+    });
 }
 //Comment from Colette - Not sure if this is correct as I can't seem to run the `npm test -- --testPathPattern 3-journey-planner.js. Alastair aware of the issue.
 
@@ -34,15 +35,19 @@ function eligibleStudents(attendances) {
 */
 
 const attendances = [
-    {name: "Ahmed", attendance: 8},
-    {name: "Clement", attendance: 10},
-    {name: "Elamin", attendance: 6},
-    {name: "Adam", attendance: 7},
-    {name: "Tayoa", attendance: 11},
-    {name: "Nina", attendance: 10},
+  { name: "Ahmed", attendance: 8 },
+  { name: "Clement", attendance: 10 },
+  { name: "Elamin", attendance: 6 },
+  { name: "Adam", attendance: 7 },
+  { name: "Tayoa", attendance: 11 },
+  { name: "Nina", attendance: 10 },
 ];
-  
+
 test("eligibleStudents function works", () => {
-    expect(eligibleStudents(attendances)).toEqual(["Ahmed", "Clement", "Tayoa", "Nina"]);
+  expect(eligibleStudents(attendances)).toEqual([
+    "Ahmed",
+    "Clement",
+    "Tayoa",
+    "Nina",
+  ]);
 });
- 
