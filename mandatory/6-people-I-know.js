@@ -409,9 +409,12 @@ This time, I only want the full names ("<firstname> <lastname>") of my friends w
 
 */
 
-let friendsWhoAreColleaguesOfStacie = friends.filter((stacysFriend) => {
-  //TO COMPLETE
-});
+let friendsWhoAreColleaguesOfStacie = [];
+friends.forEach((friend) => {
+  friend.colleagues.filter((colleague) => {});
+  return `${"friend.name.first} ${friend.name.last"}`;
+}); //TO COMPLETE
+
 /*
 
 5) Find "Multi-tasking" colleagues
