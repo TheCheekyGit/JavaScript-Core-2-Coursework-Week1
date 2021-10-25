@@ -409,11 +409,17 @@ This time, I only want the full names ("<firstname> <lastname>") of my friends w
 
 */
 
-let friendsWhoAreColleaguesOfStacie = [];
-friends.forEach((friend) => {
-  friend.colleagues.filter((colleague) => {});
+let friendsWhoAreColleaguesOfStacie = friends
+.filter((entry) => {
+  return entry.colleagues.some
+(friend => friend.name === "Stacie Villarreal"
+);
+})
+.map((friend) => {
   return `${"friend.name.first} ${friend.name.last"}`;
-}); //TO COMPLETE
+});
+
+ //TO COMPLETE method called some
 
 /*
 
@@ -428,7 +434,8 @@ This time, I only want the full names of the people who can multitask
 */
 
 let colleaguesWhoCanMultitask = [];
-
+friends.forEach((friend) => {
+ friend.colleagues.filter((colleague) => { 
 /* ======= TESTS - DO NOT MODIFY ===== 
 - To run the tests for this exercise, run `npm test -- --testPathPattern 6-people-I-know.js`
 - To run all exercises/tests in the mandatory folder, run `npm test`
